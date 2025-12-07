@@ -6,7 +6,7 @@ using namespace std;
 // Global Text Buffer for Heap
 TextBuffer* globalEditor = nullptr;
 
-/***************************************************** Helpers **************************************************/
+
 
 
 void initScreen()
@@ -32,7 +32,7 @@ void clearLine(int y)
     clrtoeol();
 }
 
-/***************************************************** Editor Logic (New/Delete) ********************************/
+/************************************************************************************/
 
 void initBuffer(TextBuffer* buf)
 {
@@ -60,7 +60,6 @@ void freeBuffer(TextBuffer* buf)
     buf->cursor = 0;
 }
 
-// Manually expand array
 void checkCapacity(TextBuffer* buf)
 {
     if (buf->length >= buf->capacity - 1) {
